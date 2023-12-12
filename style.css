@@ -1,0 +1,14 @@
+body{
+    margin: 0px;
+    overflow: hidden;
+}
+#game-container{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    margin-top: 5%;
+}
+#game-canvas{
+    outline: 2px solid blue;
+}
