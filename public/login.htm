@@ -5,19 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>*Nazwa gry*</title>
 
-    <link rel="stylesheet" href="../SCSS/main.css">
+    <link rel="stylesheet" href="../public/SCSS/main.css">
+
+    <script>
+        window.addEventListener("hashchange", function(){
+            console.log("Hash changed", window.location.hash);
+        });
+    </script>
     
 </head>
 <body>
     <div class="welcome" >
-        <div class="welcome-content" id="shown">
-            <div class="welcome-logo">
-                <h1>Web rpg 1</h1>
+        <div class="content" id="shown">
+            <div class="logo">
+                <h1>Web rpg</h1>
+                <h6>start</h6>
                 <img src="" alt="">
             </div>
-            <div class="welcome-nav">
-                <button>Play now</button>
+            <div class="nav">
+                <a class="play" href="#welcome-page">PLAY NOW</a>
             </div>
+        </div>
 
-    </body>
-    </html>
+        <div class="content" id="shown">
+            <div class="logo">
+                <h1>Web rpg</h1>
+                <h6>Login</h6>
+                <img src="" alt="">
+            </div>
+            <div class="nav">
+                <a class="play" href="#login-page">PLAY NOW</a>
+            </div>
+        </div>
+
+        <div class="content" id="shown">
+            <div class="logo">
+                <h1>Web rpg</h1>
+                <h6>Register</h6>
+                <img src="" alt="">
+            </div>
+            <div class="nav">
+                <a class="play" href="#register-page">PLAY NOW</a>
+            </div>
+        </div>
+
+        
+        
+    </div>
+</body>
+</html>
