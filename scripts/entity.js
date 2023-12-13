@@ -1,6 +1,8 @@
 class Entity{
-    constructor(){
-        entityList.push(this);
+    constructor(scene){
+        this.parentScene = scene;
+        scene.entityList.push(this);
+
     }
     update(){
 
@@ -8,6 +10,7 @@ class Entity{
     draw(){
         
     }
+    remove(){
+        
+    }
 }
-
-var entityList = []; 

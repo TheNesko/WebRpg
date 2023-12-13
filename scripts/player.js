@@ -1,9 +1,9 @@
 class Player extends Entity{
-    constructor(){
-        super();
-        this.position = new Vector2(0,0);
+    constructor(scene){
+        super(scene);
+        this.position = new Vector2(350,250);
         this.velocity = new Vector2(0,0);
-        this.size = new Vector2(25,25);
+        this.size = new Vector2(25,40);
         this.acceleration = 90;
         this.friction = 0.80;
         this.maxSpeed = 600;
@@ -36,7 +36,6 @@ class Player extends Entity{
 
         this.position.x += Math.abs(this.normalized.x)*this.velocity.x*delta;
         this.position.y += Math.abs(this.normalized.y)*this.velocity.y*delta;
-        console.log(this.velocity,this.normalized);
     }
     
     draw(){
@@ -44,4 +43,5 @@ class Player extends Entity{
         ctx.fillRect(this.position.x,this.position.y,this.size.x,this.size.y);
     }
 }
-const player = new Player();
+const player = new Player(testScene);
+const player2 = new Player(testScene2);
