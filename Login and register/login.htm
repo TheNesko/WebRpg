@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>*Nazwa gry*</title>
+
+    <link rel="stylesheet" href="../SCSS/main.css">
+    
+</head>
+<body>
+    <div class="welcome" >
+        <div class="welcome-content" id="shown">
+            <div class="welcome-logo">
+                <h1>Web rpg 1</h1>
+                <img src="" alt="">
+            </div>
+            <div class="welcome-nav">
+                <button>Play now</button>
+            </div>
+
+            
+            <div class="welcome-content" id="hidden">
+                <div class="welcome-logo">
+                    <h1>Web rpg 2</h1>
+                    <img src="" alt="">
+                </div>
+                <div class="welcome-nav">
+                    <button>Play now</button>
+                </div>
+            </div>
+            <button onclick="return show('hidden','shown');">Next page</button>
+        </div>
+        <script src="../scripts/naxtpage.js"></script>
+    </body>
+    </html>

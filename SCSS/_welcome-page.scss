@@ -1,0 +1,52 @@
+@import '_variables';
+
+$first-color: rgb(61, 61, 61);
+$secondary-color:rgb(192, 192, 192);
+
+
+@mixin center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.welcome{
+    background-color: $first-color;
+    $size: 100;
+    width:$size + vw;
+    height:$size + vh;
+    
+    @include center-element;  
+
+    .welcome-content{
+        @include center-element;
+        flex-direction: column;
+
+        .welcome-logo{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:2.5em;
+            color:$secondary-color;
+        }
+    
+        .welcome-nav{
+            button{
+                padding: 10px 50px;
+                font-size: 2em;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                background-color: $first-color;
+                color:$secondary-color;
+                border:3px solid $secondary-color;
+                border-radius: 10px;
+                
+                &:hover{
+                    color:$first-color;
+                    border-color:$first-color;
+                    background-color: $secondary-color;
+                    cursor:pointer;
+                }
+                
+            }
+        }
+    }
+}
