@@ -1,0 +1,10 @@
+@mixin centerElement(){
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin size($x, $y){
+    width:$x;
+    height:$y;
+}

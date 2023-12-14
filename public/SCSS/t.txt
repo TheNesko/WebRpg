@@ -1,0 +1,55 @@
+$first-color: rgb(0, 0, 0);
+$secondary-color:rgb(192, 192, 192);
+
+
+
+
+.welcome{
+    background-color: $first-color;
+    $size: 100;
+    width:$size + vw;
+    height:$size + vh;
+    @include center-element;  
+    flex-direction: column;
+    .content{
+        margin: 20px 0;
+        padding: 20px;
+        border: 2px solid $secondary-color;     
+        
+        @include center-element;
+        flex-direction: column;
+
+        .logo{
+            @include center-element;
+            flex-direction: column;
+            gap:15px;
+
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:2.5em;
+            color:$secondary-color;
+
+        }
+    
+        .nav{
+            a{
+                @include size(20px, 30px);
+                padding: 10px 50px;
+                font-size: 2em;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                background-color: $first-color;
+                color:$secondary-color;
+                border:3px solid $secondary-color;
+                border-radius: 10px;
+                text-decoration: none;
+                
+                &:hover{
+                    color:$first-color;
+                    border-color:$first-color;
+                    background-color: $secondary-color;
+                    cursor:pointer;
+                }
+                
+            }
+        }
+    }
+}

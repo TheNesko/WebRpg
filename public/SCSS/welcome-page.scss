@@ -1,14 +1,9 @@
-@import '_variables';
+@import '_mixins';
 
-$first-color: rgb(61, 61, 61);
+$first-color: rgb(16, 16, 16);
 $secondary-color:rgb(192, 192, 192);
 
 
-@mixin center-element {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 
 .welcome{
@@ -16,18 +11,18 @@ $secondary-color:rgb(192, 192, 192);
     $size: 100;
     width:$size + vw;
     height:$size + vh;
-    @include center-element;  
+    @include centerElement;  
     flex-direction: column;
     .content{
         margin: 20px 0;
         padding: 20px;
-        border: 5px solid $secondary-color;     
+        border: 2px solid $secondary-color;     
         
-        @include center-element;
+        @include centerElement;
         flex-direction: column;
 
         .logo{
-            @include center-element;
+            @include centerElement;
             flex-direction: column;
             gap:15px;
 

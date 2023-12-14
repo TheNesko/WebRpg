@@ -1,5 +1,5 @@
 .welcome {
-  background-color: rgb(61, 61, 61);
+  background-color: rgb(16, 16, 16);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -10,7 +10,7 @@
 .welcome .content {
   margin: 20px 0;
   padding: 20px;
-  border: 5px solid rgb(192, 192, 192);
+  border: 2px solid rgb(192, 192, 192);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,23 +27,20 @@
   color: rgb(192, 192, 192);
 }
 .welcome .content .nav a {
+  width: 20px;
+  height: 30px;
   padding: 10px 50px;
   font-size: 2em;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: rgb(61, 61, 61);
+  background-color: rgb(16, 16, 16);
   color: rgb(192, 192, 192);
   border: 3px solid rgb(192, 192, 192);
   border-radius: 10px;
   text-decoration: none;
 }
 .welcome .content .nav a:hover {
-  color: rgb(61, 61, 61);
-  border-color: rgb(61, 61, 61);
+  color: rgb(16, 16, 16);
+  border-color: rgb(16, 16, 16);
   background-color: rgb(192, 192, 192);
   cursor: pointer;
-}
-
-* {
-  margin: 0;
-  box-sizing: border-box;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=welcome-page.css.map */
