@@ -13,12 +13,6 @@ query = {login: test1,password: test2};
 function gameLoop(){
     //gamelogic
     scenehndl.updateScene();
-    if(input.isKeyDown("KeyP")){
-        scenehndl.loadScene(testScene2);
-    }
-    if(input.isKeyDown("KeyO")){
-        scenehndl.loadScene(testScene);
-    }
     //imput handle
     input.clearInputs();
 }

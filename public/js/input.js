@@ -4,9 +4,12 @@ class Input{
         window.addEventListener("keyup", this.keyUpHandler.bind(this), false);
         window.addEventListener("mousedown", this.mouseDownHandler.bind(this), false);
         window.addEventListener("mouseup", this.mouseUpHandler.bind(this), false);
+        window.addEventListener("mousemove", this.mouseMoveHandler.bind(this), false);
         this.keyPressed = [];
         this.keyDown = [];
         this.keyUp = [];
+        this.mousePos = new Vector2(0,0);
+        this.mouseGlobalPos = new Vector2(0,0);
     }
     
     clearInputs(){
@@ -63,5 +66,12 @@ class Input{
         }
     }
 
+    mouseMoveHandler(event){
+        this.mouseGlobalPos.x = event.clientX;
+        this.mouseGlobalPos.y = event.clientY;
+        var canvasPos = gameCanvas.getBoundingClientRect();
+        this.mousePos.x = event.clientX - canvasPos.left;
+        this.mousePos.y = event.clientY - canvasPos.top;
+    }
 }
 const input = new Input();

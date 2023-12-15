@@ -1,25 +1,29 @@
 class SceneHandler{
-    constructor(renderer){
+    constructor(r){
         this.currentScene;
         this.sceneList = [];
-        this.renderer = renderer;
     }
     loadScene(scene){
         this.currentScene = scene;
+        this.currentScene.ready();
     }
     updateScene(){
-        this.renderer.draw();
+        renderer.clearScreen();
+        renderer.drawBackground();
+        renderer.currentCamera.update();
         this.currentScene.draw();
         this.currentScene.update();
     }
 }
-const scenehndl = new SceneHandler(renderer);
+const scenehndl = new SceneHandler();
 
 class Scene{
     constructor(sceneHandler){
         sceneHandler.sceneList.push(this);
         this.sceneHandler = sceneHandler;
         this.entityList = [];
+    }
+    ready(){
         
     }
     update(){
@@ -33,5 +37,21 @@ class Scene{
         }
     }
 }
-const testScene = new Scene(scenehndl);
-const testScene2 = new Scene(scenehndl);
+
+class TestScene extends Scene{
+    constructor(sceneHandler){
+        super(sceneHandler);
+    }
+    ready(){
+        super.ready();
+        this.entityList.push(player);
+        this.entityList.push(block);
+    }
+    update(){
+        super.update();
+    }
+    draw(){
+        super.draw();
+    }
+}
+const testScene = new TestScene(scenehndl);
