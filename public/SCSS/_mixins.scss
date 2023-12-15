@@ -1,10 +1,20 @@
-@mixin centerElement(){
+@mixin centerElement($pos-x, $pos-y){
     display:flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: $pos-x;
+    align-items: $pos-y;
 }
 
-@mixin size($x, $y){
+@mixin Size($x, $y){
     width:$x;
     height:$y;
+}
+
+@mixin maxSize($x, $y){
+    max-width:$x;
+    max-height:$y;
+}
+
+@mixin minSize($x, $y){
+    min-width:$x;
+    min-height:$y;
 }

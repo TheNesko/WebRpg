@@ -1,5 +1,11 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
 .welcome {
-  background-color: rgb(16, 16, 16);
+  background-color: #161616;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -8,13 +14,13 @@
   flex-direction: column;
 }
 .welcome .content {
-  margin: 20px 0;
-  padding: 20px;
-  border: 2px solid rgb(192, 192, 192);
+  width: 1000px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 100px;
 }
 .welcome .content .logo {
   display: flex;
@@ -22,25 +28,52 @@
   align-items: center;
   flex-direction: column;
   gap: 15px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 2.5em;
+  font-size: 4.5em;
   color: rgb(192, 192, 192);
 }
+.welcome .content .nav {
+  width: 100%;
+  height: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .welcome .content .nav a {
-  width: 20px;
-  height: 30px;
+  transition: 0.3s;
   padding: 10px 50px;
-  font-size: 2em;
+  font-size: 3em;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: rgb(16, 16, 16);
+  background-color: #161616;
   color: rgb(192, 192, 192);
   border: 3px solid rgb(192, 192, 192);
   border-radius: 10px;
   text-decoration: none;
 }
 .welcome .content .nav a:hover {
-  color: rgb(16, 16, 16);
-  border-color: rgb(16, 16, 16);
+  color: #161616;
+  border-color: #161616;
   background-color: rgb(192, 192, 192);
   cursor: pointer;
+}
+.welcome .content .nav button {
+  transition: 0.3s;
+  background-color: #161616;
+  border: none;
+  border-radius: 25px;
+  width: 55px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcome .content .nav button img {
+  width: 40px;
+  height: 40px;
+}
+.welcome .content .nav button:hover {
+  background-color: #333333;
+  cursor: pointer;
+}
+.welcome .content .nav button:first-child:hover {
+  rotate: 180deg;
 }/*# sourceMappingURL=welcome-page.css.map */

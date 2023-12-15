@@ -1,42 +1,46 @@
 @import '_mixins';
 
-$first-color: rgb(16, 16, 16);
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    // transition: 0.3s;
+
+}
+
+$first-color: #161616;
 $secondary-color:rgb(192, 192, 192);
-
-
 
 
 .welcome{
     background-color: $first-color;
-    $size: 100;
-    width:$size + vw;
-    height:$size + vh;
-    @include centerElement;  
+    @include Size(100vw,100vh);
+    @include centerElement(center,center);  
     flex-direction: column;
     .content{
-        margin: 20px 0;
-        padding: 20px;
-        border: 2px solid $secondary-color;     
-        
-        @include centerElement;
+        @include Size(1000px, 500px);   
+        @include centerElement(center,center);
         flex-direction: column;
+        gap:100px;
 
         .logo{
-            @include centerElement;
+            @include centerElement(center,center);
             flex-direction: column;
             gap:15px;
 
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size:2.5em;
+            
+            font-size:4.5em;
             color:$secondary-color;
 
         }
     
         .nav{
+            @include Size(100%,none);
+            @include centerElement(space-around,center);
             a{
-                @include size(20px, 30px);
+                transition: 0.3s;
                 padding: 10px 50px;
-                font-size: 2em;
+                font-size: 3em;
                 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 background-color: $first-color;
                 color:$secondary-color;
@@ -52,6 +56,36 @@ $secondary-color:rgb(192, 192, 192);
                 }
                 
             }
+            button{
+                transition: 0.3s;
+                
+                background-color: $first-color;
+                border:none;
+                border-radius: 25px;
+                @include Size(55px,60px);
+                @include centerElement(center,center);
+                img{
+                    @include Size(40px,40px);
+                    
+                }
+                
+                &:hover{
+                    background-color:#333333;
+                    cursor:pointer;
+                    
+                }
+
+                &:first-child{
+                    &:hover{
+                        rotate:180deg;
+                    }
+                }
+            }
+            
+
+
+
+                
         }
     }
 }
