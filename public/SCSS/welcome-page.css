@@ -55,7 +55,43 @@
   background-color: rgb(192, 192, 192);
   cursor: pointer;
 }
-.welcome .content .nav button {
+.welcome .content .nav .dropdown {
+  position: relative;
+}
+.welcome .content .nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+.welcome .content .nav .dropdown .settings:focus ~ .welcome .content .nav .dropdown .settingsdropdown-content {
+  display: block;
+}
+.welcome .content .nav .dropdown .dropdown-content {
+  width: 130px;
+  height: 100px;
+  position: absolute;
+  left: 25px;
+}
+.welcome .content .nav .dropdown .dropdown-content ul {
+  border-left: 6px dashed rgb(192, 192, 192);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+.welcome .content .nav .dropdown .dropdown-content ul li .option-element {
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+}
+.welcome .content .nav .options {
   transition: 0.3s;
   background-color: #161616;
   border: none;
@@ -66,14 +102,11 @@
   justify-content: center;
   align-items: center;
 }
-.welcome .content .nav button img {
+.welcome .content .nav .options img {
   width: 40px;
   height: 40px;
 }
-.welcome .content .nav button:hover {
+.welcome .content .nav .options:hover {
   background-color: #333333;
   cursor: pointer;
-}
-.welcome .content .nav button:first-child:hover {
-  rotate: 180deg;
 }/*# sourceMappingURL=welcome-page.css.map */

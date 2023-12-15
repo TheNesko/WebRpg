@@ -11,6 +11,15 @@
         window.addEventListener("hashchange", function(){
             console.log("Hash changed", window.location.hash);
         });
+
+        function dropdownAnim() {
+            var x = document.getElementById("content");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
     </script>
     
 </head>
@@ -23,9 +32,30 @@
                 <img src="" alt="">
             </div>
             <div class="nav">
-                <button><img class="options" src="../public/sources/images/icons/options_icon.png" alt=""></button> 
+                <div class="dropdown">
+                    <button class="options settings" onclick="dropdownAnim()"><img class="options-icon" src="../public/sources/images/icons/options_icon.png" alt=""></button> 
+                    <div class="dropdown-content" id="content">
+                        <ul>
+                            <li>
+                                <button class="option-element">
+                                    Music
+                                </button>
+                            </li>
+                            <li>
+                                <button class="option-element">
+                                    Sound
+                                </button>
+                            </li>
+                            <li>
+                                <button class="option-element">
+                                    Info
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <a class="play" href="#welcome-page">PLAY NOW</a>
-                <button><img class="language" src="../public/sources/images/icons/language_web_icon.png" alt=""></button> 
+                <button class="options langauge"><img class="language-icon"src="../public/sources/images/icons/language_web_icon.png" alt=""></button> 
             </div>
         </div>
 

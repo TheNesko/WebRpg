@@ -56,9 +56,52 @@ $secondary-color:rgb(192, 192, 192);
                 }
                 
             }
-            button{
-                transition: 0.3s;
+            
+            .dropdown{
+                position: relative;
+                &:hover .dropdown-content{
+                    display: block;
+                }
+                .settings{
+               
+                    &:focus ~ &dropdown-content{
+                        display: block;
                 
+                    } 
+
+                }
+                .dropdown-content{
+
+                
+                    @include Size(130px, 100px);
+                    position: absolute;
+                    left:25px;
+                    ul{
+                        
+                        border-left:6px dashed $secondary-color;
+
+                        @include centerElement(center, center);
+                        flex-direction: column;
+                        gap:10px;
+                        list-style: none;
+                        
+                        li{
+                            .option-element{
+                                background-color: #333333;
+                                @include centerElement(center, center);
+                                @include Size(150px,50px);
+                                padding:10px 20px;
+                                border:none;
+                                color:white;
+                                font-size:1.5em;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .options{
+                transition: 0.3s;
                 background-color: $first-color;
                 border:none;
                 border-radius: 25px;
@@ -73,12 +116,6 @@ $secondary-color:rgb(192, 192, 192);
                     background-color:#333333;
                     cursor:pointer;
                     
-                }
-
-                &:first-child{
-                    &:hover{
-                        rotate:180deg;
-                    }
                 }
             }
             
