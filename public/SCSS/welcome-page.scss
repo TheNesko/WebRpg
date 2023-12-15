@@ -4,8 +4,6 @@
     margin:0;
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    // transition: 0.3s;
-
 }
 
 $first-color: #161616;
@@ -62,14 +60,7 @@ $secondary-color:rgb(192, 192, 192);
                 &:hover .dropdown-content{
                     display: block;
                 }
-                .settings{
                
-                    &:focus ~ &dropdown-content{
-                        display: block;
-                
-                    } 
-
-                }
                 .dropdown-content{
 
                 
