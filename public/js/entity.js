@@ -20,7 +20,7 @@ class Block extends Entity{
         this.pos = new Vector2(500,500);
     }
     update(){
-        this.pos.x -= 50*delta;
+        
     }
     draw(){
         renderer.drawRect(this.pos,100,25,"red");
