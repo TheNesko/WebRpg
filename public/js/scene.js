@@ -8,9 +8,8 @@ class SceneHandler{
         this.currentScene.ready();
     }
     updateScene(){
-        renderer.clearScreen();
-        renderer.drawBackground();
-        renderer.currentCamera.update();
+        renderer.updateCamera();
+        renderer.updateQueue();
         this.currentScene.draw();
         this.currentScene.update();
     }

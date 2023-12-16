@@ -1,4 +1,5 @@
 const express = require("express");
+const { MongoClient } = require('mongodb');
 const path = require("path");
 
 const app = express();
@@ -15,7 +16,7 @@ app.listen(3000,() => {
 
 class Database{
     constructor(){
-      this.MongoClient = require('mongodb');
+      
       this.uri = "mongodb+srv://CursedIndel:PenFQghfjTbT3HS@webrpg.odveqn7.mongodb.net/?retryWrites=true&w=majority";
       this.client = new MongoClient(this.uri);
     }

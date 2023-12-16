@@ -36,12 +36,12 @@ class Player extends Entity{
 
         this.position.x += Math.abs(this.normalized.x)*this.velocity.x*delta;
         this.position.y += Math.abs(this.normalized.y)*this.velocity.y*delta;
-        playerCamera.position.x = this.position.x-(this.size.x/2);
-        playerCamera.position.y = this.position.y-(this.size.y/2);
+        playerCamera.position.x = this.position.x+(this.size.x/2);
+        playerCamera.position.y = this.position.y+(this.size.y/2);
     }
     
     draw(){
-        renderer.drawRect(this.position,this.size.x,this.size.y,"grey");
+        renderer.drawRect(this.position,this.size.x,this.size.y,"grey",renderIndex.player);
     }
 }
 const player = new Player();
