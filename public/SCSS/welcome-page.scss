@@ -11,14 +11,13 @@ $secondary-color:rgb(192, 192, 192);
 
 
 .container{
-    background-color: $first-color;
     @include Size(100vw,100vh);
     @include centerElement(center,center);  
     flex-direction: column;
 
-    
+    background-color: $first-color;
+
     .content{
-         
         @include Size(1000px, 500px);   
         @include centerElement(center,center);
         flex-direction: column;
@@ -31,66 +30,44 @@ $secondary-color:rgb(192, 192, 192);
             gap:15px;
 
             
-            font-size:4.5em;
             color:$secondary-color;
+            font-size:4.5em;
 
         }
-    
         .nav{
-            @include Size(100%,none);
-            @include centerElement(space-around,center);
-            a{
-                transition: 0.3s;
-                padding: 10px 50px;
-                font-size: 3em;
-                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                background-color: $first-color;
-                color:$secondary-color;
-                border:3px solid $secondary-color;
-                border-radius: 10px;
-                text-decoration: none;
-                
-                &:hover{
-                    color:$first-color;
-                    border-color:$first-color;
-                    background-color: $secondary-color;
-                    cursor:pointer;
-                }
-                
-            }
-            
-            
-            .options{
-                transition: 0.3s;
-                background-color: rgba(16,16,16,0);
-                border:none;
-                
-                @include Size(55px,60px);
-                @include centerElement(center,center);
-                img{
-                    @include Size(40px,40px);
-                    
-                }
-                
-                &:hover{
-                    
-                    cursor:pointer;
-                    
-                }
-            }          
             .dropdown{
+                .options{
+                    @include Size(55px,60px);
+                    @include centerElement(center,center);
+    
+                    background-color: rgba(16,16,16,0);
+                    
+                    border:none;
+        
+                    transition: 0.3s;
+                    img{
+                        @include Size(40px,40px);
+                        
+                    }
+                    
+                    &:hover{
+                        
+                        cursor:pointer;
+                        
+                    }
+                }          
                 position: relative;
                
                 
                 .dropdown-content{
                     display: none;
                     @include maxSize(200px, 170px);
+                    
                     position: absolute;
                     left:25px;
-
+                    
                     overflow-y:scroll;
                     overflow-x:hidden;
-
                     &::-webkit-scrollbar {
                         width: 10px;
                       }
@@ -113,28 +90,56 @@ $secondary-color:rgb(192, 192, 192);
 
                     ul{
                         
-                        border-left:6px dashed $secondary-color;
                         @include centerElement(center, center);
                         flex-direction: column;
                         gap:10px;
-                        list-style: none;
+                        
+                        border-left:6px dashed $secondary-color;
                         
                         margin-right: 0px;
                         
+                        list-style: none;
                         li{
                             .element{
-                                background-color: #333333;
                                 @include centerElement(center, center);
                                 @include Size(150px,50px);
-                                padding:10px 20px;
-                                border:none;
+                                background-color: #333333;
                                 color:white;
+                               
                                 font-size:1.5em;
+
+                                border:none;
+                
+                                padding:10px 20px;
                             }      
                         }
                     }
                 }
             }
+            @include Size(100%,none);
+            @include centerElement(space-around,center);
+            a{
+                background-color: $first-color;
+                color:$secondary-color;
+                
+                font-size: 3em;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-decoration: none;
+                
+                border:3px solid $secondary-color;
+                border-radius: 10px;
+                
+                padding: 10px 50px;
+    
+                transition: 0.3s;
+                &:hover{
+                    background-color: $secondary-color;
+                    color:$first-color;
+                    border-color:$first-color;
+                    cursor:pointer;
+                }
+                
+            }     
         }
     }
     
