@@ -36,7 +36,6 @@ class Player extends Entity{
         this.rect.position.x += Math.abs(this.normalized.x)*this.velocity.x*delta;
         this.rect.position.y += Math.abs(this.normalized.y)*this.velocity.y*delta;
         playerCamera.position = this.rect.center();
-        console.log(this.velocity);
     }
     
     draw(){

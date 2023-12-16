@@ -5,23 +5,23 @@ class Rect{
         this.height = h;
     }
     topRight(){
-        var topRight = this.position;
+        var topRight = new Vector2(this.position.x,this.position.y);
         topRight.x += this.width;
         return topRight;
     }
     center(){
-        var center = this.position;
+        var center = new Vector2(this.position.x,this.position.y);
         center.x += this.width/2;
         center.y += this.height/2;
         return center;
     }
     bottomLeft(){
-        var bottomLeft = this.position;
+        var bottomLeft = new Vector2(this.position.x,this.position.y);
         bottomLeft.y += this.height;
         return bottomLeft;
     }
     bottomRight(){
-        var bottomRight = this.position;
+        var bottomRight = new Vector2(this.position.x,this.position.y);
         bottomRight.x += this.width;
         bottomRight.y += this.height;
         return bottomRight;

@@ -17,13 +17,13 @@ class Entity{
 class Block extends Entity{
     constructor(){
         super();
-        this.pos = new Vector2(500,500);
+        this.rect = new Rect(250,250,100,25)
     }
     update(){
         
     }
     draw(){
-        renderer.drawRect(this.pos,100,25,"red");
+        renderer.drawRect(this.rect.position,this.rect.width,this.rect.height,"red");
     }
 }
 const block = new Block();
