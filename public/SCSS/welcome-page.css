@@ -4,7 +4,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.welcome {
+.container {
   background-color: #161616;
   width: 100vw;
   height: 100vh;
@@ -13,7 +13,7 @@
   align-items: center;
   flex-direction: column;
 }
-.welcome .content {
+.container .content {
   width: 1000px;
   height: 500px;
   display: flex;
@@ -22,7 +22,7 @@
   flex-direction: column;
   gap: 100px;
 }
-.welcome .content .logo {
+.container .content .logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,14 +31,14 @@
   font-size: 4.5em;
   color: rgb(192, 192, 192);
 }
-.welcome .content .nav {
+.container .content .nav {
   width: 100%;
   height: none;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.welcome .content .nav a {
+.container .content .nav a {
   transition: 0.3s;
   padding: 10px 50px;
   font-size: 3em;
@@ -49,28 +49,57 @@
   border-radius: 10px;
   text-decoration: none;
 }
-.welcome .content .nav a:hover {
+.container .content .nav a:hover {
   color: #161616;
   border-color: #161616;
   background-color: rgb(192, 192, 192);
   cursor: pointer;
 }
-.welcome .content .nav .dropdown {
+.container .content .nav .options {
+  transition: 0.3s;
+  background-color: rgba(16, 16, 16, 0);
+  border: none;
+  width: 55px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .content .nav .options img {
+  width: 40px;
+  height: 40px;
+}
+.container .content .nav .options:hover {
+  cursor: pointer;
+}
+.container .content .nav .dropdown {
   position: relative;
 }
-.welcome .content .nav .dropdown:hover .dropdown-content {
-  display: block;
-}
-.welcome .content .nav .dropdown .settings:focus ~ .welcome .content .nav .dropdown .settingsdropdown-content {
-  display: block;
-}
-.welcome .content .nav .dropdown .dropdown-content {
-  width: 130px;
-  height: 100px;
+.container .content .nav .dropdown .dropdown-content {
+  display: none;
+  max-width: 200px;
+  max-height: 170px;
   position: absolute;
   left: 25px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
-.welcome .content .nav .dropdown .dropdown-content ul {
+.container .content .nav .dropdown .dropdown-content::-webkit-scrollbar {
+  width: 10px;
+}
+.container .content .nav .dropdown .dropdown-content::-webkit-scrollbar-track {
+  background: #161616;
+}
+.container .content .nav .dropdown .dropdown-content::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.container .content .nav .dropdown .dropdown-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.container .content .nav .dropdown .dropdown-content ul {
   border-left: 6px dashed rgb(192, 192, 192);
   display: flex;
   justify-content: center;
@@ -78,8 +107,9 @@
   flex-direction: column;
   gap: 10px;
   list-style: none;
+  margin-right: 0px;
 }
-.welcome .content .nav .dropdown .dropdown-content ul li .option-element {
+.container .content .nav .dropdown .dropdown-content ul li .element {
   background-color: #333333;
   display: flex;
   justify-content: center;
@@ -91,22 +121,6 @@
   color: white;
   font-size: 1.5em;
 }
-.welcome .content .nav .options {
-  transition: 0.3s;
-  background-color: #161616;
-  border: none;
-  border-radius: 25px;
-  width: 55px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.welcome .content .nav .options img {
-  width: 40px;
-  height: 40px;
-}
-.welcome .content .nav .options:hover {
-  background-color: #333333;
-  cursor: pointer;
+.container .login {
+  display: none;
 }/*# sourceMappingURL=welcome-page.css.map */

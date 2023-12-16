@@ -10,8 +10,8 @@
     
 </head>
 <body>
-    <div class="welcome" >
-        <div class="content">
+    <div class="container">
+        <div class="content welcome">
             <div class="logo">
                 <h1>Web RPG</h1>
                
@@ -19,44 +19,64 @@
             </div>
             <div class="nav">
                 <div class="dropdown">
-                    <button class="options" id="settings" onclick="dropdownAnim()"><img class="options-icon" src="../public/sources/images/icons/options_icon.png" alt=""></button> 
-                    <div class="dropdown-content" id="content">
+                    <button class="options" id="settings" onclick="dropdownAnim('option-content','settings')"><img class="options-icon" src="../public/sources/images/icons/options_icon.png" alt=""></button> 
+                    <div class="dropdown-content" id="option-content">
                         <ul>
                             <li>
-                                <button class="option-element">
+                                <button class="element">
                                     Music
                                 </button>
                             </li>
                             <li>
-                                <button class="option-element">
+                                <button class="element">
                                     Sound
                                 </button>
                             </li>
                             <li>
-                                <button class="option-element">
+                                <button class="element">
                                     Info
                                 </button>
                             </li>
                         </ul>
                     </div>
                 </div>
+
                 <a class="play" href="#welcome-page">PLAY NOW</a>
-                <button class="options langauge"><img class="language-icon"src="../public/sources/images/icons/language_web_icon.png" alt=""></button> 
+                <div class="dropdown">
+
+                    <button class="options" id="language" onclick="dropdownAnim('language-content','language')">
+                        <img class="language-icon"src="../public/sources/images/icons/language_web_icon.png" alt="">
+                    </button> 
+                    <div class="dropdown-content" id="language-content">
+                        <ul>
+                            <li>
+                                <button class="element">
+                                    English
+                                </button>
+                            </li>
+                            <li>
+                                <button class="element">
+                                    Polish
+                                </button>
+                            </li>
+                            <li>
+                                <button class="element">
+                                    Deutsch
+                                </button>
+                            </li>
+                            <li>
+                                <button class="element">
+                                    Deutsch
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div> 
+       
 
         <!-- <div class="content" id="shown">
-            <div class="logo">
-                <h1>Web rpg</h1>
-                <h6>Login</h6>
-                <img src="" alt="">
-            </div>
-            <div class="nav">
-                <a class="play" href="#login-page">PLAY NOW</a>
-            </div>
-        </div>
-
-        <div class="content" id="shown">
             <div class="logo">
                 <h1>Web rpg</h1>
                 <h6>Register</h6>
@@ -65,7 +85,7 @@
             <div class="nav">
                 <a class="play" href="#register-page">PLAY NOW</a>
             </div>
-        </div> -->
+        </div> --> 
 
         
         
