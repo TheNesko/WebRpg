@@ -1,0 +1,8 @@
+@import '_variables';
+@import '_mixins';
+
+content{
+    .login{
+        background-color: $secondary-color;
+    }
+}

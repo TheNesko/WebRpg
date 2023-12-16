@@ -1,3 +1,5 @@
+@import '_variables';
+
 @mixin centerElement($pos-x, $pos-y){
     display:flex;
     justify-content: $pos-x;

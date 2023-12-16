@@ -1,3 +1,7 @@
+content .login {
+  background-color: rgb(192, 192, 192);
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -103,6 +107,9 @@
   font-size: 1.5em;
   border: none;
   padding: 10px 20px;
+}
+.container .content .nav .dropdown .dropdown-content ul li .element:hover {
+  background-color: #303030;
 }
 .container .content .nav a {
   background-color: #161616;
