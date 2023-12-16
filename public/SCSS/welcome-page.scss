@@ -10,16 +10,20 @@ $first-color: #161616;
 $secondary-color:rgb(192, 192, 192);
 
 
-.welcome{
+.container{
     background-color: $first-color;
     @include Size(100vw,100vh);
     @include centerElement(center,center);  
     flex-direction: column;
+
+    
     .content{
+         
         @include Size(1000px, 500px);   
         @include centerElement(center,center);
         flex-direction: column;
         gap:100px;
+        
 
         .logo{
             @include centerElement(center,center);
@@ -55,47 +59,12 @@ $secondary-color:rgb(192, 192, 192);
                 
             }
             
-            .dropdown{
-                position: relative;
-                &:hover .dropdown-content{
-                    display: block;
-                }
-               
-                .dropdown-content{
-
-                
-                    @include Size(130px, 100px);
-                    position: absolute;
-                    left:25px;
-                    ul{
-                        
-                        border-left:6px dashed $secondary-color;
-
-                        @include centerElement(center, center);
-                        flex-direction: column;
-                        gap:10px;
-                        list-style: none;
-                        
-                        li{
-                            .option-element{
-                                background-color: #333333;
-                                @include centerElement(center, center);
-                                @include Size(150px,50px);
-                                padding:10px 20px;
-                                border:none;
-                                color:white;
-                                font-size:1.5em;
-                            }
-                        }
-                    }
-                }
-            }
-
+            
             .options{
                 transition: 0.3s;
-                background-color: $first-color;
+                background-color: rgba(16,16,16,0);
                 border:none;
-                border-radius: 25px;
+                
                 @include Size(55px,60px);
                 @include centerElement(center,center);
                 img{
@@ -104,16 +73,92 @@ $secondary-color:rgb(192, 192, 192);
                 }
                 
                 &:hover{
-                    background-color:#333333;
+                    
                     cursor:pointer;
                     
                 }
-            }
-            
-
-
-
+            }          
+            .dropdown{
+                position: relative;
+               
                 
+                .dropdown-content{
+                    display: none;
+                    @include maxSize(200px, 170px);
+                    position: absolute;
+                    left:25px;
+
+                    overflow-y:scroll;
+                    overflow-x:hidden;
+
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                      }
+                      
+                      /* Track */
+                    &::-webkit-scrollbar-track {
+                        background: $first-color; 
+                    }
+                       
+                      /* Handle */
+                    &::-webkit-scrollbar-thumb {
+                        background: #888; 
+                      }
+                      
+                      /* Handle on hover */
+                    &::-webkit-scrollbar-thumb:hover {
+                        background: #555; 
+                    }
+
+
+                    ul{
+                        
+                        border-left:6px dashed $secondary-color;
+                        @include centerElement(center, center);
+                        flex-direction: column;
+                        gap:10px;
+                        list-style: none;
+                        
+                        margin-right: 0px;
+                        
+                        li{
+                            .element{
+                                background-color: #333333;
+                                @include centerElement(center, center);
+                                @include Size(150px,50px);
+                                padding:10px 20px;
+                                border:none;
+                                color:white;
+                                font-size:1.5em;
+                            }      
+                        }
+                    }
+                }
+            }
         }
+    }
+    
+ 
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    // .welcome{
+    //     // display: none;
+    // }
+
+    .login{
+        display: none;
     }
 }
