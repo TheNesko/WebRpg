@@ -1,9 +1,8 @@
 class Player extends Entity{
     constructor(){
         super();
-        this.position = new Vector2(350,250);
+        this.rect = new Rect(350,250,25,40);
         this.velocity = new Vector2(0,0);
-        this.size = new Vector2(25,40);
         this.acceleration = 90;
         this.friction = 0.80;
         this.maxSpeed = 600;
@@ -34,14 +33,14 @@ class Player extends Entity{
 
         this.normalized = this.velocity.normalize();
 
-        this.position.x += Math.abs(this.normalized.x)*this.velocity.x*delta;
-        this.position.y += Math.abs(this.normalized.y)*this.velocity.y*delta;
-        playerCamera.position.x = this.position.x+(this.size.x/2);
-        playerCamera.position.y = this.position.y+(this.size.y/2);
+        this.rect.position.x += Math.abs(this.normalized.x)*this.velocity.x*delta;
+        this.rect.position.y += Math.abs(this.normalized.y)*this.velocity.y*delta;
+        playerCamera.position = this.rect.center();
+        console.log(this.velocity);
     }
     
     draw(){
-        renderer.drawRect(this.position,this.size.x,this.size.y,"grey",renderIndex.player);
+        renderer.drawRect(this.rect.position,this.rect.width,this.rect.height,"grey",renderIndex.player);
     }
 }
 const player = new Player();
