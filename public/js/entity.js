@@ -1,15 +1,6 @@
-class Entity{
+class Entity extends Object{
     constructor(){
-
-    }
-    update(){
-
-    }
-    draw(){
-        
-    }
-    remove(){
-        
+        super();
     }
 }
 

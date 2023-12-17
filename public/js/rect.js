@@ -1,5 +1,6 @@
-class Rect{
+class Rect extends Object{
     constructor(x,y,w,h){
+        super();
         this.position = new Vector2(x,y);
         this.width = w;
         this.height = h;
