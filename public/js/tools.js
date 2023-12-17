@@ -33,3 +33,7 @@ function roundClosestToZero(value){
     }
     return Math.floor(value);
 }
+
+function log(message=""){
+    console.log(message);
+}
