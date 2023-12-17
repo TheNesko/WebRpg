@@ -1,8 +1,59 @@
 @import '_variables';
 @import '_mixins';
 
-content{
-    .login{
-        background-color: $secondary-color;
+
+.container{
+    .content{ 
+        .login-form{
+            @include Size(70%, 200px);
+            @include centerElement(center,center);
+            border: 3px solid $secondary-color;
+
+            form{            
+                @include centerElement(center,center);
+                @include Size(450px, 200px);
+
+                flex-direction: column;
+                gap:20px;
+                
+                padding: 20px;
+                
+                .login{
+                    @include centerElement(space-between, center);
+                    @include Size(100%, 50px);
+                    font-size: 1.5em;
+                    color: $secondary-color;
+                    
+                        
+                    input{
+                        background-color: $first-color;
+                        border: 1px solid $secondary-color;
+                        color: $secondary-color;
+                        border-radius: none;
+                        padding: 7px 10px;
+                        font-size:20px;
+                    }  
+                    input[type="text"]{
+                        letter-spacing: 2px;
+                    } 
+                    label{
+                        @include centerElement(flex-start,center);
+                    }         
+                }
+                .checkbox{
+                    @include Size(400px,0px);
+                    @include centerElement(flex-end, center);
+                    gap:10px;
+
+                    font-size: 20px;
+                    input[type="checkbox"]{
+                        @include Size(20px,20px);
+                        
+                  
+                    }
+                
+                }
+            }     
+        }    
     }
 }

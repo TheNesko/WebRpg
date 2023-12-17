@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="content welcome">
+        <div class="content welcome-page">
             <div class="logo">
                 <h1>Web RPG</h1>
                
@@ -42,7 +42,7 @@
                 </div>
 
                 <a class="play" href="#welcome-page">PLAY NOW</a>
-                
+
                 <div class="dropdown">
                     <button class="options" id="language" onclick="dropdownAnim('language-content','language')">
     
@@ -76,18 +76,88 @@
             </div>
         </div> 
        
-
-        <!-- <div class="content" id="shown">
+        <div class="content login-page">
             <div class="logo">
-                <h1>Web rpg</h1>
-                <h6>Register</h6>
+                <h1>Web RPG</h1>
+               
                 <img src="" alt="">
             </div>
-            <div class="nav">
-                <a class="play" href="#register-page">PLAY NOW</a>
+            <div class="login-form">
+                <form>
+                    <div class="login username">
+                        <label for="username">Name: </label>
+                        <input type="text" name="" id="login-username" placeholder="Name">
+                    </div>
+                    <div class="login password">
+                        <label for="password">Password: </label>
+                        <input type="password" name="" id="login-username" placeholder="Password">
+                    </div>
+                    <div class="login checkbox">
+                        <label for="checkbox">Remember password: </label> 
+                        <input type="checkbox" id="checkbox" value="Remember passoword">
+                    </div>
+                </form>            
             </div>
-        </div> --> 
+           
+            <div class="nav">
+                <div class="dropdown">
+                    <button class="options" id="settings" onclick="dropdownAnim('option-content','settings')"><img class="options-icon" src="../public/sources/images/icons/options_icon.png" alt=""></button> 
+                    <div class="dropdown-content" id="option-content">
+                        <ul>
+                            <li>
+                                <button class="element">
+                                    Music
+                                </button>
+                            </li>
+                            <li>
+                                <button class="element">
+                                    Sound
+                                </button>
+                            </li>
+                            <li>
+                                <button class="element">
+                                    Info
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
+                <a class="play" href="#login-page">LOGIN</a>
+
+                <div class="dropdown">
+                    <button class="options" id="language" onclick="dropdownAnim('language-content','language')">
+    
+                        <img class="language-icon"src="../public/sources/images/icons/language_web_icon.png" alt="">
+                    </button> 
+                        <div class="dropdown-content" id="language-content">
+                        <ul>
+                            <li>
+                                <button class="element">
+                                    English
+                                </button>
+                            </li>
+                            <li>
+                                <button class="element">
+                                    Polish
+                                </button>
+                            </li>
+                            <li>
+                                <button class="element">
+                                    Deutsch
+                                </button>
+                            </li>
+                            <li>
+                                <button class="element">
+                                    Deutsch
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
         
         
     </div>

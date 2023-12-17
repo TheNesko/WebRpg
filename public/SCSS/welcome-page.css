@@ -1,5 +1,58 @@
-content .login {
-  background-color: rgb(192, 192, 192);
+.container .content .login-form {
+  width: 70%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(192, 192, 192);
+}
+.container .content .login-form form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 200px;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.container .content .login-form form .login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  font-size: 1.5em;
+  color: rgb(192, 192, 192);
+}
+.container .content .login-form form .login input {
+  background-color: #161616;
+  border: 1px solid rgb(192, 192, 192);
+  color: rgb(192, 192, 192);
+  border-radius: none;
+  padding: 7px 10px;
+  font-size: 20px;
+}
+.container .content .login-form form .login input[type=text] {
+  letter-spacing: 2px;
+}
+.container .content .login-form form .login label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .content .login-form form .checkbox {
+  width: 400px;
+  height: 0px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+.container .content .login-form form .checkbox input[type=checkbox] {
+  width: 20px;
+  height: 20px;
 }
 
 * {
@@ -128,6 +181,6 @@ content .login {
   border-color: #161616;
   cursor: pointer;
 }
-.container .login {
+.container .welcome-page {
   display: none;
 }/*# sourceMappingURL=welcome-page.css.map */
