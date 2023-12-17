@@ -2,6 +2,7 @@ class Player extends Entity{
     constructor(){
         super();
         this.rect = new Rect(350,250,25,40);
+        this.collider = new Collider(this,this.rect,0,0);
         this.velocity = new Vector2(0,0);
         this.acceleration = 90;
         this.friction = 0.80;
@@ -32,10 +33,34 @@ class Player extends Entity{
         this.velocity.x = roundClosestToZero(clamp(this.velocity.x,-this.maxSpeed,this.maxSpeed));
 
         this.normalized = this.velocity.normalize();
-
         this.rect.position.x += Math.abs(this.normalized.x)*this.velocity.x*delta;
         this.rect.position.y += Math.abs(this.normalized.y)*this.velocity.y*delta;
+
         playerCamera.position = this.rect.center();
+        this.collider.update();
+        var colliders = this.collider.getColliders();
+        if(colliders.length != 0){
+            for(var index in colliders){
+                var collider = colliders[index];
+                if(this.collider.collisionTolerance(this.rect.left,collider.shape.right)){
+                    this.velocity.x = 0;
+                    this.rect.left = collider.shape.right;
+                }
+                if(this.collider.collisionTolerance(this.rect.top,collider.shape.bottom)){
+                    this.velocity.y = 0;
+                    this.rect.top = collider.shape.bottom;
+                }
+                if(this.collider.collisionTolerance(this.rect.right,collider.shape.left)){
+                    this.velocity.x = 0;
+                    this.rect.right = collider.shape.left;
+                }
+                if(this.collider.collisionTolerance(this.rect.bottom,collider.shape.top)){
+                    this.velocity.y = 0;
+                    this.rect.bottom = collider.shape.top;
+                }
+            }
+        }
+        
     }
     
     draw(){

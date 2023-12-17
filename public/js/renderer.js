@@ -34,6 +34,7 @@ class Renderer{
         var args = args[0];
         ctx.font = args[1];
         var pos = args[0];
+        ctx.fillStyle = args[3];
         ctx.fillText(args[2],pos.x,pos.y);
     }
 }
@@ -93,14 +94,14 @@ class RenderQueue{
         var args = [pos,width,height,color];
         this.addToQueue(this.renderer.drawRect,args,zIndex);
     }
-    drawText(pos,font,text,zIndex=renderIndex.default){
+    drawText(pos,text,color="black",font="24px serif",zIndex=renderIndex.UI){
         var pos = this.renderer.offsetPosition(pos);
-        var args = [pos,font,text];
+        var args = [pos,font,text,color];
         this.addToQueue(this.renderer.drawText,args,zIndex);
     }
 
-    drawTextLocal(pos,font,text,zIndex=renderIndex.default){
-        var args = [pos,font,text];
+    drawTextLocal(pos,text,color="black",font="24px serif",zIndex=renderIndex.UI){
+        var args = [pos,font,text,color];
         this.addToQueue(this.renderer.drawText,args,zIndex);
     }
 }

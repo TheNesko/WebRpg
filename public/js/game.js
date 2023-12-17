@@ -10,8 +10,8 @@ query = {login: test1,password: test2};
 
 function gameLoop(){
     //gamelogic
-    scenehndl.updateScene();
     debug.update();
+    scenehndl.updateScene();
     //imput handle
     input.clearInputs();
 }

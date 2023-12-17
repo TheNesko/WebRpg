@@ -8,10 +8,10 @@ class SceneHandler{
         this.currentScene.ready();
     }
     updateScene(){
-        renderer.updateCamera();
-        renderer.updateQueue();
-        this.currentScene.draw();
         this.currentScene.update();
+        renderer.updateCamera();
+        this.currentScene.draw();
+        renderer.updateQueue();
     }
 }
 const scenehndl = new SceneHandler();
@@ -45,6 +45,9 @@ class TestScene extends Scene{
         super.ready();
         this.entityList.push(player);
         this.entityList.push(block);
+        this.entityList.push(block1);
+        this.entityList.push(block2);
+        this.entityList.push(block3);
     }
     update(){
         super.update();
