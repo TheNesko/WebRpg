@@ -16,9 +16,10 @@ const collisionLayers = [];
     }
 })();
 
-class Collider{
+class Collider extends Object{
     #collisionTolerance = 5;
     constructor(parent,rect,detectionLayer=0,collisionLayer=0){
+        super();
         this.parent = parent;
         this.shape = rect;
         collisionLayers[detectionLayer].add(this);

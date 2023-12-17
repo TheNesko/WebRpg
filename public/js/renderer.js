@@ -1,5 +1,6 @@
-class Camera{
+class Camera extends Object{
     constructor(){
+        super();
         this.position = new Vector2(0,0);
         this.centerOffset = new Vector2(canvasWidth/2,canvasHeight/2);
         this.offset = new Vector2(0,0);
