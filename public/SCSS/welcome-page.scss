@@ -7,8 +7,15 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+
 $first-color: #161616;
 $secondary-color:rgb(192, 192, 192);
+
+
+body{
+    background-color: $first-color;
+}
+
 
 
 .container{
@@ -141,8 +148,7 @@ $secondary-color:rgb(192, 192, 192);
                     color:$first-color;
                     border-color:$first-color;
                     cursor:pointer;
-                }
-                
+                }         
             }     
         }
     }
@@ -152,21 +158,17 @@ $secondary-color:rgb(192, 192, 192);
 
 
 
-
-
-
-
-
-
-
     
 
 
 
-    // .welcome-page{
-    //     display: none;
-    // }
+    .welcome-page{
+        display: none;
+    }
     .login-page{
         display:none;
     }
+    // .register-page{
+    //     display: none;
+    // }
 }

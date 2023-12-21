@@ -2,11 +2,33 @@
 @import '_mixins';
 
 
+
 .container{
+    
+
+    .account-help{
+        @include centerElement(center,flex-start);
+        gap:10px;
+        @include Size(500px, 20px);
+        a{
+            @include Size(50%, 0px);
+            color: $secondary-color;
+            opacity: 0.7;
+            text-decoration: none;
+            &:hover{
+                opacity:1;
+            }
+        }
+
+    }
+    
     .content{ 
         .login-form{
-            @include Size(70%, 200px);
+            
+            @include minSize(70%, 250px);
             @include centerElement(center,center);
+            gap:20px;
+            flex-direction: column;
             border: 3px solid $secondary-color;
 
             form{            
@@ -43,6 +65,60 @@
                 .checkbox{
                     @include Size(400px,0px);
                     @include centerElement(flex-end, center);
+                    gap:5px;
+
+                    font-size: 20px;
+                    input[type="checkbox"]{
+                        @include Size(20px,20px);
+                        
+                  
+                    }              
+                }
+            }     
+        } 
+
+        .register-form{
+            @include minSize(70%, 350px);
+            @include centerElement(center,center);
+            gap:20px;
+            flex-direction: column;
+            
+            border: 3px solid $secondary-color;
+
+            form{            
+                @include centerElement(center,center);
+                @include Size(450px, 200px);
+
+                flex-direction: column;
+                gap:20px;
+                
+                padding: 20px;
+                
+                .register{
+                    @include centerElement(space-between, center);
+                    @include Size(100%, 50px);
+                    font-size: 1.5em;
+                    color: $secondary-color;
+                    
+                        
+                    input{
+                        background-color: $first-color;
+                        border: 1px solid $secondary-color;
+                        color: $secondary-color;
+                        border-radius: none;
+                        padding: 7px 10px;
+                        font-size:20px;
+                    }  
+                    input[type="text"]{
+                        letter-spacing: 2px;
+                    } 
+                    label{
+                        @include centerElement(flex-start,center);
+                    }         
+                }
+                .checkbox{
+                    @include Size(400px,0px);
+                    @include centerElement(flex-end, center);
                     gap:10px;
 
                     font-size: 20px;
@@ -50,8 +126,7 @@
                         @include Size(20px,20px);
                         
                   
-                    }
-                
+                    }              
                 }
             }     
         }    

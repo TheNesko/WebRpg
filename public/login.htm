@@ -19,7 +19,7 @@
             </div>
             <div class="nav">
                 <div class="dropdown">
-                    <button class="options" id="settings" onclick="dropdownAnim('welcome','settings')"><img class="options-icon" src="../public/sources/images/icons/options_icon.png" alt=""></button> 
+                    <button class="options" id="settings" onclick="dropdownAnim('welcome','settings')"><img class="options-icon" src="sources/images/icons/options_icon.png" alt=""></button> 
                     <div class="dropdown-content" class="settings-content">
                         <ul>
                             <li>
@@ -96,12 +96,16 @@
                         <label for="checkbox">Remember password: </label> 
                         <input type="checkbox" id="checkbox" value="Remember passoword">
                     </div>
-                </form>            
+                    <div class="account-help">
+                        <a href="">I already haven't an account</a>
+                        <a href="">I forgot my password or username</a>
+                    </div>        
+                </form>     
             </div>
            
             <div class="nav">
                 <div class="dropdown">
-                    <button class="options" id="settings" onclick="dropdownAnim('login','settings')"><img class="options-icon" src="../public/sources/images/icons/options_icon.png" alt=""></button> 
+                    <button class="options" id="settings" onclick="dropdownAnim('login','settings')"><img class="options-icon" src="sources/images/icons/options_icon.png" alt=""></button> 
                     <div class="dropdown-content" class="settings-content">
                         <ul>
                             <li>
@@ -158,8 +162,94 @@
             </div>
         </div> 
         
-        
-        
+        <div class="content register-page">
+            <div class="logo">
+                <h1>Web RPG</h1>
+               
+                <img src="" alt="">
+            </div>
+            <div class="register-form">
+                <form>
+                    <div class="register username">
+                        <label for="username">Name: </label>
+                        <input type="text" name="" id="resgister-username" placeholder="Name">
+                    </div>
+                    <div class="register email">
+                        <label for="email">E-mail: </label>
+                        <input type="email" id="email" placeholder="E-mail">
+                    </div>
+                    <div class="register password">
+                        <label for="password">Password: </label>
+                        <input type="password" name="" id="register-password" placeholder="Password">
+                    </div>
+                    <div class="register reapet-password">
+                        <label for="r-password">Reapet password: </label>
+                        <input type="password" name="" id="register-reapet-password" placeholder="Password">
+                    </div>
+                </form>
+                <div class="account-help">
+                    <a href="">I already have an account</a>
+                </div>            
+            </div>
+           
+            <div class="nav">
+                <div class="dropdown">
+                    <button class="options" id="settings" onclick="dropdownAnim('register','settings')"><img class="options-icon" src="sources/images/icons/options_icon.png" alt=""></button> 
+                    <div class="dropdown-content" class="settings-content">
+                        <ul>
+                            <li>
+                                <button class="element">
+                                    Music
+                                </button>
+                            </li>
+                            <li>
+                                <button class="element">
+                                    Sound
+                                </button>
+                            </li>
+                            <li>
+                                <button class="element">
+                                    Info
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a class="play" href="#register-page">Register</a>
+
+                <div class="dropdown">
+                    <button class="options" id="language" onclick="dropdownAnim('register','language')">
+    
+                        <img class="language-icon"src="sources/images/icons/language_web_icon.png" alt="">
+                    </button> 
+                        <div class="dropdown-content" class="language-content">
+                        <ul>
+                            <li>
+                                <button class="element">
+                                    English
+                                </button>
+                            </li>
+                            <li>
+                                <button class="element">
+                                    Polish
+                                </button>
+                            </li>
+                            <li>
+                                <button class="element">
+                                    Deutsch
+                                </button>
+                            </li>
+                            <li>
+                                <button class="element">
+                                    Deutsch
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>         
     </div>
     <script src="js/animations.js"></script>
 </body>
