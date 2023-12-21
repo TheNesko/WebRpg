@@ -1,40 +1,25 @@
 const express = require("express");
-const { MongoClient } = require('mongodb');
 const path = require("path");
+const bodyParser = require("body-parser");
+const mongoose = require('mongoose');
+const user = require("./model/user");
 
+mongoose.connect('mongodb://localhost:27017/public/login');
 const app = express();
 
 app.use(express.static(path.join(__dirname,"public")));
+app.use(bodyParser.json());
 
 app.use((req,res) => {
     res.sendFile(path.join(__dirname,"public/index.htm"));
+})
+
+app.post("public/login",async (req, res) =>{
+    console.log(req.body);
+    res.json({status: "ok"});
 })
 
 app.listen(3000,() => {
     console.log("App listening on port 3000");
 })
 
-class Database{
-    constructor(){
-      
-      this.uri = "mongodb+srv://CursedIndel:PenFQghfjTbT3HS@webrpg.odveqn7.mongodb.net/?retryWrites=true&w=majority";
-      this.client = new MongoClient(this.uri);
-    }
-    async get(query) {
-      var result;
-      try {
-        await this.client.connect();
-        // Send a ping to confirm a successful connection
-        await this.client.db("admin").command({ ping: 1 });
-        const data = this.client.db("User");
-        const coll = data.collection("User");
-    
-        result = await coll.find(query).toArray();
-    
-      } finally {
-        await this.client.close();
-        return result;
-      }
-    }
-  }
-  const db = new Database();
