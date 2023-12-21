@@ -50,43 +50,54 @@ body{
         @include centerElement(center,center);
         flex-direction: column;
         gap:100px;
-        
-
         .logo{
             @include centerElement(center,center);
             flex-direction: column;
             gap:15px;
      
             color:$secondary-color;
-            font-size:4.5em;
+            font-size:4em;
 
         }
-        .welcome-content{
-            a{
-                background-color: $first-color;
-                color:$secondary-color;
-                
-                font-size: 3em;
-                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                text-decoration: none;
-                
-                border:3px solid $secondary-color;
-                border-radius: 10px;
-                
-                padding: 10px 50px;
-    
-                transition: 0.3s;
-                &:hover{
-                    background-color: $secondary-color;
-                    color:$first-color;
-                    border-color:$first-color;
-                    cursor:pointer;
-                }  
-            }       
-        }
+        main{
 
-        .nav{
+            // .welcome-content{
+            //     display: none;
+            // }
+            .login-content{
+                display:none;
+            }
+            .register-content{
+                display: none;
+            }
+
+            @include centerElement(center,center);
+            gap:50px;
+            .welcome-content{
+                a{
+                    background-color: $first-color;
+                    color:$secondary-color;
+                    
+                    font-size: 2.5em;
+                    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    text-decoration: none;
+                    
+                    border:3px solid $secondary-color;
+                    border-radius: 10px;
+                    
+                    padding: 10px 50px;
+        
+                    transition: 0.3s;
+                    &:hover{
+                        background-color: $secondary-color;
+                        color:$first-color;
+                        border-color:$first-color;
+                        cursor:pointer;
+                    }  
+                }       
+            }
             .dropdown{
+                align-self: flex-end;
                 .options{
                     @include Size(55px,60px);
                     @include centerElement(center,center);
@@ -110,7 +121,7 @@ body{
                 }          
                 position: relative;
                 
-
+    
                 #settings-content{
                
                     position: absolute;
@@ -136,7 +147,7 @@ body{
                                 color:white;
                                 
                                 font-size:1.5em;
-
+    
                                 border:none;
                                 margin-right:30px;
                                 padding:10px 20px;
@@ -146,6 +157,42 @@ body{
                             }      
                         }
                     }
+                }
+
+                #language-content{
+                    position: absolute;
+                    left:25px;
+                    
+                    ul{
+                        
+                        @include centerElement(center, center);
+                        flex-direction: column;
+                        gap:10px;
+                        
+                        border-left:6px dashed $secondary-color;
+                        
+                        margin-right: 0px;
+                        
+                        list-style: none;
+                        li{
+                            .element{
+                                @include centerElement(center, center);
+                                @include Size(150px,50px);
+                                background-color: #333333;
+                                color:white;
+                               
+                                font-size:1.5em;
+    
+                                border:none;
+                
+                                padding:10px 20px;
+                                &:hover{
+                                    background-color: #303030; 
+                                }
+                            }      
+                        }
+                    }
+                   
                 }
                 
                 .dropdown-content{
@@ -177,63 +224,8 @@ body{
                     }
                     
                 }
-                #language-content{
-                    position: absolute;
-                    left:25px;
-                    overflow-inline:scroll;
-                    ul{
-                        
-                        @include centerElement(center, center);
-                        flex-direction: column;
-                        gap:10px;
-                        
-                        border-left:6px dashed $secondary-color;
-                        
-                        margin-right: 0px;
-                        
-                        list-style: none;
-                        li{
-                            .element{
-                                @include centerElement(center, center);
-                                @include Size(150px,50px);
-                                background-color: #333333;
-                                color:white;
-                               
-                                font-size:1.5em;
-
-                                border:none;
-                
-                                padding:10px 20px;
-                                &:hover{
-                                    background-color: #303030; 
-                                }
-                            }      
-                        }
-                    }
-                   
-                }
             }
-            @include Size(100%,none);
-            @include centerElement(space-around,center);     
-        }
-    }
-    
- 
-    
-
-
-
-    
-
-
-
-    // .welcome-page{
-    //     display: none;
-    // }
-    .login-page{
-        display:none;
-    }
-    .register-page{
-        display: none;
+            
+        } 
     }
 }

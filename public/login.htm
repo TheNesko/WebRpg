@@ -14,67 +14,11 @@
         <div class="content welcome-page">
             <div class="logo">
                 <h1>Web RPG</h1>
-               
+                
                 <img src="" alt="">
             </div>
-            <!-- WELCOME -->
-            <div class="welcome-content">
-                <a class="play" href="#welcome-page">PLAY NOW</a>
-                
-            </div>
-
-            <!-- LOGIN -->
-            <div class="login-form">
-                <form>
-                    <div class="login username">
-                        <label for="username">Name: </label>
-                        <input type="text" name="" id="login-username" placeholder="Name">
-                    </div>
-                    <div class="login password">
-                        <label for="password">Password: </label>
-                        <input type="password" name="" id="login-username" placeholder="Password">
-                    </div>
-                    <div class="login checkbox">
-                        <label for="checkbox">Remember password: </label> 
-                        <input type="checkbox" id="checkbox" value="Remember passoword">
-                    </div>
-                    <div class="account-help">
-                        <a href="#register">I already haven't an account</a>
-                        <a href="">I forgot my password or username</a>
-                    </div>        
-                </form>     
-                <input type="submit" value="LOGIN" id="login" name="log">
-            </div>
-
-            <!-- REGISTER -->
-            <div class="register-form">
-                <form>
-                    <div class="register username">
-                        <label for="username">Name: </label>
-                        <input type="text" name="" id="resgister-username" placeholder="Name">
-                    </div>
-                    <div class="register email">
-                        <label for="email">E-mail: </label>
-                        <input type="email" id="email" placeholder="E-mail">
-                    </div>
-                    <div class="register password">
-                        <label for="password">Password: </label>
-                        <input type="password" name="" id="register-password" placeholder="Password">
-                    </div>
-                    <div class="register reapet-password">
-                        <label for="r-password">Reapet password: </label>
-                        <input type="password" name="" id="register-reapet-password" placeholder="Password">
-                    </div>
-                    <div class="account-help">
-                        <a href="">I already have an account</a>
-                    </div>    
-                </form>
-                <input type="submit" value="REGISTER" id="register" name="reg">
-            </div>
-
-            
-
-            <div class="nav">
+            <main>
+                <!-- OPTIONS -->
                 <div class="dropdown">
                     <button class="options" id="settings" onclick="dropdownAnim('welcome','settings')"><img class="options-icon" src="sources/images/icons/options_icon.png" alt=""></button> 
                     <div class="dropdown-content" id="settings-content">
@@ -103,10 +47,71 @@
                     </div>
                 </div>
 
+                <!-- WELCOME -->
+                <div class="welcome-content">
+                    <a class="play" href="#welcome-page">PLAY NOW</a>
+                    
+                </div>
+    
+                <!-- LOGIN -->
+                <div class="login-content">
+                    <form>
+                        <div class="login username">
+                            <label for="username">Name: </label>
+                            <input type="text" name="" id="login-username" placeholder="Name">
+                        </div>
+                        <div class="login password">
+                            <label for="password">Password: </label>
+                            <input type="password" name="" id="login-username" placeholder="Password">
+                        </div>
+                        <div class="login checkbox">
+                            <label for="checkbox">Remember password: </label> 
+                            <input type="checkbox" id="checkbox" value="Remember passoword">
+                        </div>
+                        <div class="account-help">
+                            <a href="#register">I already haven't an account</a>
+                            <a href="">I forgot my password or username</a>
+                        </div>        
+                        <div class="submit">
+                            <input type="submit" value="LOGIN" id="login" name="log">
+                        </div>    
+                    </form> 
+                </div>
+    
+                
+
+                <!-- REGISTER -->
+                <div class="register-content">
+                    <form>
+                        <div class="register username">
+                            <label for="username">Name: </label>
+                            <input type="text" name="" id="resgister-username" placeholder="Name">
+                        </div>
+                        <div class="register email">
+                            <label for="email">E-mail: </label>
+                            <input type="email" id="email" placeholder="E-mail">
+                        </div>
+                        <div class="register password">
+                            <label for="password">Password: </label>
+                            <input type="password" name="" id="register-password" placeholder="Password">
+                        </div>
+                        <div class="register reapet-password">
+                            <label for="r-password">Reapet password: </label>
+                            <input type="password" name="" id="register-reapet-password" placeholder="Password">
+                        </div>
+                        <div class="account-help">
+                            <a href="">I already have an account</a>
+                        </div>    
+                        <div class="submit">
+                            <input type="submit" value="REGISTER" id="register" name="reg">
+                        </div>
+                    </form>
+                </div>
+
                 <div class="dropdown">
                     <button class="options" id="language" onclick="dropdownAnim('welcome','language')">
     
-                        <img class="language-icon"src="sources/images/icons/language_web_icon.png" alt="">
+                        <img class="language-icon" src="sources/images/icons/language_web_icon.png" alt="">
                     </button> 
                         <div class="dropdown-content" id="language-content">
                         <ul>
@@ -133,7 +138,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </main>
         </div>       
     </div>
     <script src="js/animations.js"></script>
