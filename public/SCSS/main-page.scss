@@ -14,6 +14,27 @@ $secondary-color:rgb(192, 192, 192);
 
 body{
     background-color: $first-color;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+    &::-webkit-scrollbar-track {
+        background: $first-color; 
+    }
+       
+      /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #383838; 
+      }
+      
+      /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+
+    
 }
 
 
@@ -22,7 +43,6 @@ body{
     @include Size(100vw,100vh);
     @include centerElement(center,center);  
     flex-direction: column;
-
     background-color: $first-color;
 
     .content{
@@ -36,18 +56,42 @@ body{
             @include centerElement(center,center);
             flex-direction: column;
             gap:15px;
-
-            
+     
             color:$secondary-color;
             font-size:4.5em;
 
         }
+        .welcome-content{
+            a{
+                background-color: $first-color;
+                color:$secondary-color;
+                
+                font-size: 3em;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-decoration: none;
+                
+                border:3px solid $secondary-color;
+                border-radius: 10px;
+                
+                padding: 10px 50px;
+    
+                transition: 0.3s;
+                &:hover{
+                    background-color: $secondary-color;
+                    color:$first-color;
+                    border-color:$first-color;
+                    cursor:pointer;
+                }  
+            }       
+        }
+
         .nav{
             .dropdown{
                 .options{
                     @include Size(55px,60px);
                     @include centerElement(center,center);
     
+                    
                     background-color: rgba(16,16,16,0);
                     
                     border:none;
@@ -65,14 +109,51 @@ body{
                     }
                 }          
                 position: relative;
+                
+
+                #settings-content{
                
+                    position: absolute;
+                    transform: rotateX(0deg);
+                    right:25px;
+                   
+                    ul{
+                        
+                        @include centerElement(center, flex-end);
+                        flex-direction: column;
+                        gap:10px;
+                        
+                        border-right:6px dashed $secondary-color;
+                     
+                        
+                        list-style: none;
+                        position: relative;
+                        li{
+                            .element{
+                                @include centerElement(center, center);
+                                @include Size(150px,50px);
+                                background-color: #333333;
+                                color:white;
+                                
+                                font-size:1.5em;
+
+                                border:none;
+                                margin-right:30px;
+                                padding:10px 20px;
+                                &:hover{
+                                    background-color: #303030; 
+                                }
+                            }      
+                        }
+                    }
+                }
                 
                 .dropdown-content{
                     display: none;
+                    
                     @include maxSize(200px, 170px);
                     
-                    position: absolute;
-                    left:25px;
+                    
                     
                     overflow-y:scroll;
                     overflow-x:hidden;
@@ -94,8 +175,12 @@ body{
                     &::-webkit-scrollbar-thumb:hover {
                         background: #555; 
                     }
-
-
+                    
+                }
+                #language-content{
+                    position: absolute;
+                    left:25px;
+                    overflow-inline:scroll;
                     ul{
                         
                         @include centerElement(center, center);
@@ -125,31 +210,11 @@ body{
                             }      
                         }
                     }
+                   
                 }
             }
             @include Size(100%,none);
-            @include centerElement(space-around,center);
-            a{
-                background-color: $first-color;
-                color:$secondary-color;
-                
-                font-size: 3em;
-                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                text-decoration: none;
-                
-                border:3px solid $secondary-color;
-                border-radius: 10px;
-                
-                padding: 10px 50px;
-    
-                transition: 0.3s;
-                &:hover{
-                    background-color: $secondary-color;
-                    color:$first-color;
-                    border-color:$first-color;
-                    cursor:pointer;
-                }         
-            }     
+            @include centerElement(space-around,center);     
         }
     }
     
@@ -162,13 +227,13 @@ body{
 
 
 
-    .welcome-page{
-        display: none;
-    }
+    // .welcome-page{
+    //     display: none;
+    // }
     .login-page{
         display:none;
     }
-    // .register-page{
-    //     display: none;
-    // }
+    .register-page{
+        display: none;
+    }
 }

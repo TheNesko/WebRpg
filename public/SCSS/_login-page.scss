@@ -23,68 +23,44 @@
     }
     
     .content{ 
-        .login-form{
-            
-            @include minSize(70%, 250px);
-            @include centerElement(center,center);
-            gap:20px;
-            flex-direction: column;
-            border: 3px solid $secondary-color;
-
-            form{            
-                @include centerElement(center,center);
-                @include Size(450px, 200px);
-
-                flex-direction: column;
-                gap:20px;
-                
-                padding: 20px;
-                
-                .login{
-                    @include centerElement(space-between, center);
-                    @include Size(100%, 50px);
-                    font-size: 1.5em;
-                    color: $secondary-color;
-                    
-                        
-                    input{
-                        background-color: $first-color;
-                        border: 1px solid $secondary-color;
-                        color: $secondary-color;
-                        border-radius: none;
-                        padding: 7px 10px;
-                        font-size:20px;
-                    }  
-                    input[type="text"]{
-                        letter-spacing: 2px;
-                    } 
-                    label{
-                        @include centerElement(flex-start,center);
-                    }         
-                }
-                .checkbox{
-                    @include Size(400px,0px);
-                    @include centerElement(flex-end, center);
-                    gap:5px;
-
-                    font-size: 20px;
-                    input[type="checkbox"]{
-                        @include Size(20px,20px);
-                        
-                  
-                    }              
-                }
-            }     
-        } 
 
         .register-form{
+            @include minSize(70%, 475px);
+        }
+
+        .login-form{
+        
             @include minSize(70%, 350px);
-            @include centerElement(center,center);
+        }
+
+        .register-form,
+        .login-form{
+            @include centerElement(space-around,center);
             gap:20px;
             flex-direction: column;
             
             border: 3px solid $secondary-color;
-
+            input[type="submit"]{
+                
+                
+                background-color: $first-color;
+                color:$secondary-color;
+                font-size: 2em;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-decoration: none;
+                
+                border:3px solid $secondary-color;
+                border-radius: 10px;
+                padding: 10px 50px;
+    
+                transition: 0.3s;
+                &:hover{
+                    background-color: $secondary-color;
+                    color:$first-color;
+                    border-color:$first-color;
+                    cursor:pointer;
+                }  
+            } 
             form{            
                 @include centerElement(center,center);
                 @include Size(450px, 200px);
@@ -94,9 +70,12 @@
                 
                 padding: 20px;
                 
-                .register{
-                    @include centerElement(space-between, center);
+
+                .register,
+                .login{
                     @include Size(100%, 50px);
+
+                    @include centerElement(space-between, center);
                     font-size: 1.5em;
                     color: $secondary-color;
                     

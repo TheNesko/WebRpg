@@ -16,16 +16,43 @@
 .container .account-help a:hover {
   opacity: 1;
 }
+.container .content .register-form {
+  min-width: 70%;
+  min-height: 475px;
+}
 .container .content .login-form {
   min-width: 70%;
-  min-height: 250px;
+  min-height: 350px;
+}
+.container .content .register-form,
+.container .content .login-form {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 20px;
   flex-direction: column;
   border: 3px solid rgb(192, 192, 192);
 }
+.container .content .register-form input[type=submit],
+.container .content .login-form input[type=submit] {
+  background-color: #161616;
+  color: rgb(192, 192, 192);
+  font-size: 2em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  border: 3px solid rgb(192, 192, 192);
+  border-radius: 10px;
+  padding: 10px 50px;
+  transition: 0.3s;
+}
+.container .content .register-form input[type=submit]:hover,
+.container .content .login-form input[type=submit]:hover {
+  background-color: rgb(192, 192, 192);
+  color: #161616;
+  border-color: #161616;
+  cursor: pointer;
+}
+.container .content .register-form form,
 .container .content .login-form form {
   display: flex;
   justify-content: center;
@@ -36,15 +63,21 @@
   gap: 20px;
   padding: 20px;
 }
+.container .content .register-form form .register,
+.container .content .register-form form .login,
+.container .content .login-form form .register,
 .container .content .login-form form .login {
+  width: 100%;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 50px;
   font-size: 1.5em;
   color: rgb(192, 192, 192);
 }
+.container .content .register-form form .register input,
+.container .content .register-form form .login input,
+.container .content .login-form form .register input,
 .container .content .login-form form .login input {
   background-color: #161616;
   border: 1px solid rgb(192, 192, 192);
@@ -53,73 +86,22 @@
   padding: 7px 10px;
   font-size: 20px;
 }
+.container .content .register-form form .register input[type=text],
+.container .content .register-form form .login input[type=text],
+.container .content .login-form form .register input[type=text],
 .container .content .login-form form .login input[type=text] {
   letter-spacing: 2px;
 }
+.container .content .register-form form .register label,
+.container .content .register-form form .login label,
+.container .content .login-form form .register label,
 .container .content .login-form form .login label {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
+.container .content .register-form form .checkbox,
 .container .content .login-form form .checkbox {
-  width: 400px;
-  height: 0px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 5px;
-  font-size: 20px;
-}
-.container .content .login-form form .checkbox input[type=checkbox] {
-  width: 20px;
-  height: 20px;
-}
-.container .content .register-form {
-  min-width: 70%;
-  min-height: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-direction: column;
-  border: 3px solid rgb(192, 192, 192);
-}
-.container .content .register-form form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 450px;
-  height: 200px;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-}
-.container .content .register-form form .register {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  font-size: 1.5em;
-  color: rgb(192, 192, 192);
-}
-.container .content .register-form form .register input {
-  background-color: #161616;
-  border: 1px solid rgb(192, 192, 192);
-  color: rgb(192, 192, 192);
-  border-radius: none;
-  padding: 7px 10px;
-  font-size: 20px;
-}
-.container .content .register-form form .register input[type=text] {
-  letter-spacing: 2px;
-}
-.container .content .register-form form .register label {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.container .content .register-form form .checkbox {
   width: 400px;
   height: 0px;
   display: flex;
@@ -128,7 +110,8 @@
   gap: 10px;
   font-size: 20px;
 }
-.container .content .register-form form .checkbox input[type=checkbox] {
+.container .content .register-form form .checkbox input[type=checkbox],
+.container .content .login-form form .checkbox input[type=checkbox] {
   width: 20px;
   height: 20px;
 }
@@ -141,6 +124,22 @@
 
 body {
   background-color: #161616;
+  overflow-x: hidden;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: #161616;
+}
+body::-webkit-scrollbar-thumb {
+  background: #383838;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .container {
@@ -170,6 +169,23 @@ body {
   color: rgb(192, 192, 192);
   font-size: 4.5em;
 }
+.container .content .welcome-content a {
+  background-color: #161616;
+  color: rgb(192, 192, 192);
+  font-size: 3em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  border: 3px solid rgb(192, 192, 192);
+  border-radius: 10px;
+  padding: 10px 50px;
+  transition: 0.3s;
+}
+.container .content .welcome-content a:hover {
+  background-color: rgb(192, 192, 192);
+  color: #161616;
+  border-color: #161616;
+  cursor: pointer;
+}
 .container .content .nav {
   width: 100%;
   height: none;
@@ -197,12 +213,41 @@ body {
 .container .content .nav .dropdown .options:hover {
   cursor: pointer;
 }
+.container .content .nav .dropdown #settings-content {
+  position: absolute;
+  transform: rotateX(0deg);
+  right: 25px;
+}
+.container .content .nav .dropdown #settings-content ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 10px;
+  border-right: 6px dashed rgb(192, 192, 192);
+  list-style: none;
+  position: relative;
+}
+.container .content .nav .dropdown #settings-content ul li .element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  background-color: #333333;
+  color: white;
+  font-size: 1.5em;
+  border: none;
+  margin-right: 30px;
+  padding: 10px 20px;
+}
+.container .content .nav .dropdown #settings-content ul li .element:hover {
+  background-color: #303030;
+}
 .container .content .nav .dropdown .dropdown-content {
   display: none;
   max-width: 200px;
   max-height: 170px;
-  position: absolute;
-  left: 25px;
   overflow-y: scroll;
   overflow-x: hidden;
   /* Track */
@@ -221,7 +266,12 @@ body {
 .container .content .nav .dropdown .dropdown-content::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-.container .content .nav .dropdown .dropdown-content ul {
+.container .content .nav .dropdown #language-content {
+  position: absolute;
+  left: 25px;
+  overflow-inline: scroll;
+}
+.container .content .nav .dropdown #language-content ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,7 +281,7 @@ body {
   margin-right: 0px;
   list-style: none;
 }
-.container .content .nav .dropdown .dropdown-content ul li .element {
+.container .content .nav .dropdown #language-content ul li .element {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,29 +293,12 @@ body {
   border: none;
   padding: 10px 20px;
 }
-.container .content .nav .dropdown .dropdown-content ul li .element:hover {
+.container .content .nav .dropdown #language-content ul li .element:hover {
   background-color: #303030;
-}
-.container .content .nav a {
-  background-color: #161616;
-  color: rgb(192, 192, 192);
-  font-size: 3em;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-decoration: none;
-  border: 3px solid rgb(192, 192, 192);
-  border-radius: 10px;
-  padding: 10px 50px;
-  transition: 0.3s;
-}
-.container .content .nav a:hover {
-  background-color: rgb(192, 192, 192);
-  color: #161616;
-  border-color: #161616;
-  cursor: pointer;
-}
-.container .welcome-page {
-  display: none;
 }
 .container .login-page {
   display: none;
-}/*# sourceMappingURL=welcome-page.css.map */
+}
+.container .register-page {
+  display: none;
+}/*# sourceMappingURL=main-page.css.map */
